@@ -14,7 +14,7 @@ export default function Solutions() {
           transition={{ duration: 0.8 }}
           className="flex-1 w-full relative flex justify-center"
         >
-          <img src="/solutions_designed.png" alt="Solutions Designed for Every Financial Need" className="w-full h-auto max-w-[500px] object-contain drop-shadow-[0_12px_12px_rgba(0,0,0,0.4)]" />
+          <img src="/solutions_designed.webp" alt="Solutions Designed for Every Financial Need" className="w-full h-auto max-w-[500px] object-contain drop-shadow-[0_12px_12px_rgba(0,0,0,0.4)]" />
         </motion.div>
 
         {/* Right Content */}

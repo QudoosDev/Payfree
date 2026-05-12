@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
           
           {/* Card Graphic */}
           <div className="w-full mb-8 flex justify-center">
-            <img src="/Personilized_Solutions.png" alt="Personalized Solutions" className="w-full h-auto object-contain drop-shadow-[0_8px_8px_rgba(0,0,0,0.4)]" />
+            <img src="/Personilized_Solutions.webp" alt="Personalized Solutions" className="w-full h-auto object-contain drop-shadow-[0_8px_8px_rgba(0,0,0,0.4)]" />
           </div>
 
           <h3 className="text-2xl font-bold text-[var(--color-text-dark)] mb-3">Personalized Solutions</h3>
@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
         >
           
           <div className="w-full mb-8 relative z-10 flex justify-center">
-            <img src="/Trusted_by_50000.png" alt="Trusted by 50,000 Clients" className="w-full h-auto object-contain drop-shadow-[0_8px_8px_rgba(0,0,0,0.4)]" />
+            <img src="/Trusted_by_50000.webp" alt="Trusted by 50,000 Clients" className="w-full h-auto object-contain drop-shadow-[0_8px_8px_rgba(0,0,0,0.4)]" />
           </div>
 
           <h3 className="text-2xl font-bold mb-3 relative z-10">Trusted by 50,000 Clients</h3>
@@ -78,7 +78,7 @@ export default function WhyChooseUs() {
           
           {/* Card Graphic */}
           <div className="w-full mb-8 flex justify-center">
-            <img src="/Ai_Powered.png" alt="AI-Powered Insights" className="w-full h-auto object-contain drop-shadow-[0_8px_8px_rgba(0,0,0,0.4)]" />
+            <img src="/Ai_Powered.webp" alt="AI-Powered Insights" className="w-full h-auto object-contain drop-shadow-[0_8px_8px_rgba(0,0,0,0.4)]" />
           </div>
 
           <h3 className="text-2xl font-bold text-[var(--color-text-dark)] mb-3">AI-Powered Insights</h3>

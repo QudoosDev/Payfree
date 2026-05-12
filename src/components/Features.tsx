@@ -67,7 +67,7 @@ export default function Features() {
           className="flex-1 w-full relative mt-12 lg:mt-0 flex justify-center items-center"
         >
           <img 
-             src="/smart_feature_section.png" 
+             src="/smart_feature_section.webp" 
              alt="Smart features dashboard" 
              className="w-full max-w-[560px] h-auto object-contain drop-shadow-[0_12px_12px_rgba(0,0,0,0.4)]" 
           />

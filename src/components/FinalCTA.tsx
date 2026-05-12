@@ -1,7 +1,11 @@
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
-export default function FinalCTA() {
+interface FinalCTAProps {
+  onAuth: (type: 'login' | 'signup') => void;
+}
+
+export default function FinalCTA({ onAuth }: FinalCTAProps) {
   return (
     <section className="w-full max-w-[1400px] mx-auto px-4 py-12 md:py-16">
       <motion.div 
@@ -21,7 +25,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="hidden lg:block absolute top-[50%] left-0 -translate-y-1/2 -translate-x-[15%] w-[320px] opacity-100 z-0"
         >
-          <img src="/final_CTA_left.png" alt="Decoration left" className="w-full h-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.1)]" />
+          <img src="/final_CTA_left.webp" alt="Decoration left" className="w-full h-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.1)]" />
         </motion.div>
 
         {/* Right Side Cutoff */}
@@ -32,7 +36,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="hidden lg:block absolute top-[50%] right-0 -translate-y-1/2 translate-x-[15%] w-[340px] opacity-100 z-0"
         >
-          <img src="/final_CTA_right.png" alt="Decoration right" className="w-full h-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.1)]" />
+          <img src="/final_CTA_right.webp" alt="Decoration right" className="w-full h-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.1)]" />
         </motion.div>
 
         {/* Bottom Chart Cutoff - Positioned to be overlapped by button */}
@@ -43,7 +47,7 @@ export default function FinalCTA() {
           transition={{ duration: 1, delay: 0.1 }}
           className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[35%] w-[350px] md:w-[600px] lg:w-[680px] z-0"
         >
-           <img src="/Last_CTA_center.png" alt="Decoration center" className="w-full h-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.15)] mt-[45px]" />
+           <img src="/Last_CTA_center.webp" alt="Decoration center" className="w-full h-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.15)] mt-[45px]" />
         </motion.div>
 
 
@@ -57,7 +61,10 @@ export default function FinalCTA() {
           financial decisions with us.
         </p>
 
-        <button className="relative z-20 flex items-center gap-2 btn-custom-gradient text-[#1a1c1b] px-9 py-3.5 rounded-full font-bold shadow-md transition-all active:scale-95 group">
+        <button 
+          onClick={() => onAuth('signup')}
+          className="relative z-20 flex items-center gap-2 btn-custom-gradient text-[#1a1c1b] px-9 py-3.5 rounded-full font-bold shadow-md transition-all active:scale-95 group cursor-pointer"
+        >
           Get Started Today <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
         </button>
         

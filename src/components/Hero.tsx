@@ -2,13 +2,17 @@ import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import DashboardPreview from './DashboardPreview';
 
-export default function Hero() {
+interface HeroProps {
+  onAuth: (type: 'login' | 'signup') => void;
+}
+
+export default function Hero({ onAuth }: HeroProps) {
   return (
     <section className="relative w-full pt-[100px] pb-10 flex flex-col items-center overflow-hidden">
       {/* Background Image Area */}
       <div className="absolute inset-0 z-0 overflow-hidden bg-[#F8F8F8]">
         <img 
-          src="/hero_section_background_gradient.png" 
+          src="/hero_section_background_gradient.webp" 
           alt="Background Gradient" 
           className="w-full h-[150%] md:h-full object-cover md:object-fill object-top pointer-events-none"
         />
@@ -41,10 +45,16 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 relative z-20 mt-4 px-4 sm:px-0"
         >
-          <button className="gsap-hero-btn shrink-0 flex items-center justify-center gap-2 btn-custom-gradient text-[#1a1c1b] px-6 sm:px-8 py-3.5 rounded-full font-medium">
+          <button 
+            onClick={() => onAuth('signup')}
+            className="gsap-hero-btn shrink-0 flex items-center justify-center gap-2 btn-custom-gradient text-[#1a1c1b] px-6 sm:px-8 py-3.5 rounded-full font-medium cursor-pointer"
+          >
             Get Started <ArrowUpRight size={18} className="opacity-40" />
           </button>
-          <button className="gsap-hero-btn shrink-0 flex items-center justify-center btn-white-3d text-[#3E4441] px-6 sm:px-8 py-3.5 rounded-full font-medium">
+          <button 
+            onClick={() => onAuth('signup')}
+            className="gsap-hero-btn shrink-0 flex items-center justify-center btn-white-3d text-[#3E4441] px-6 sm:px-8 py-3.5 rounded-full font-medium cursor-pointer"
+          >
             Book a Call
           </button>
         </motion.div>

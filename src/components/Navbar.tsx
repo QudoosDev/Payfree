@@ -2,7 +2,11 @@ import { useState } from 'react';
 import { AlignJustify, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-export default function Navbar() {
+interface NavbarProps {
+  onAuth: (type: 'login' | 'signup') => void;
+}
+
+export default function Navbar({ onAuth }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -16,7 +20,7 @@ export default function Navbar() {
         
         {/* Logo */}
         <div className="flex items-center flex-1">
-          <img src="/logo.png" alt="Payfree" className="h-8 md:h-10 object-contain w-auto md:ml-[-140px]" />
+          <img src="/logo.webp" alt="Payfree" className="h-8 md:h-10 object-contain w-auto md:ml-[-140px]" />
         </div>
 
         {/* Center Links (Desktop) */}
@@ -33,10 +37,16 @@ export default function Navbar() {
         <div className="hidden md:flex flex-1 justify-end">
           <div className="flex items-center gap-1 bg-white border border-[#E8EAE9] shadow-[0_12px_30px_-8px_rgba(0,0,0,0.08)] rounded-full p-1.5 relative overflow-hidden md:mr-[-160px]">
             <div className="absolute inset-0 bg-white shadow-[inset_0_2px_4px_rgba(255,255,255,1),inset_0_-1px_3px_rgba(0,0,0,0.02)] rounded-full pointer-events-none" />
-            <button className="relative z-10 text-[14px] font-medium tracking-wide bg-transparent text-[#3E4441] px-5 py-2 rounded-full hover:bg-[#F4F5F4] transition-colors cursor-pointer">
+            <button 
+              onClick={() => onAuth('login')}
+              className="relative z-10 text-[14px] font-medium tracking-wide bg-transparent text-[#3E4441] px-5 py-2 rounded-full hover:bg-[#F4F5F4] transition-colors cursor-pointer"
+            >
               Log in
             </button>
-            <button className="relative z-10 text-[14px] font-medium tracking-wide btn-custom-gradient text-[#1a1c1b] px-6 py-2 rounded-full">
+            <button 
+              onClick={() => onAuth('signup')}
+              className="relative z-10 text-[14px] font-medium tracking-wide btn-custom-gradient text-[#1a1c1b] px-6 py-2 rounded-full"
+            >
               Sign Up
             </button>
           </div>
@@ -70,8 +80,24 @@ export default function Navbar() {
               <a href="#reporting" onClick={() => setIsOpen(false)} className="text-[15px] font-medium text-[#3E4441] px-4 py-3 rounded-xl hover:bg-gray-50">Analytics</a>
               <a href="#solutions" onClick={() => setIsOpen(false)} className="text-[15px] font-medium text-[#3E4441] px-4 py-3 rounded-xl hover:bg-gray-50">Solutions</a>
               <div className="h-px bg-gray-100 my-2" />
-              <button className="text-[15px] font-medium text-[#3E4441] px-4 py-3 w-full text-center">Log in</button>
-              <button className="text-[15px] font-medium btn-custom-gradient text-[#1a1c1b] px-4 py-3 text-center rounded-xl my-1">Sign Up</button>
+              <button 
+                onClick={() => {
+                  setIsOpen(false);
+                  onAuth('login');
+                }}
+                className="text-[15px] font-medium text-[#3E4441] px-4 py-3 w-full text-center cursor-pointer"
+              >
+                Log in
+              </button>
+              <button 
+                onClick={() => {
+                  setIsOpen(false);
+                  onAuth('signup');
+                }}
+                className="text-[15px] font-medium btn-custom-gradient text-[#1a1c1b] px-4 py-3 text-center rounded-xl my-1 cursor-pointer"
+              >
+                Sign Up
+              </button>
             </div>
           </motion.div>
         )}
