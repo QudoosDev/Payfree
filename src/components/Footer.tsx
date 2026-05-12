@@ -14,7 +14,7 @@ export default function Footer() {
         {/* Brand Column */}
         <div className="lg:col-span-4 pl-2">
           <div className="flex items-center gap-2 mb-6">
-            <img src="/logo.webp" alt="Payfree" className="h-8 object-contain" />
+            <img src="/logo.webp" alt="Payfree" referrerPolicy="no-referrer" className="h-8 object-contain" />
           </div>
           <p className="text-gray-500 text-sm max-w-[260px] leading-relaxed mb-8">
             Helping individuals and business simplify money management through

@@ -20,7 +20,7 @@ export default function Reporting() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex-1 w-full max-w-[450px] relative flex justify-center"
         >
-          <img src="/instant_one.webp" alt="Instant Reporting" className="w-full h-auto object-contain drop-shadow-[0_12px_12px_rgba(0,0,0,0.4)]" />
+          <img src="/instant_one.webp" alt="Instant Reporting" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-[0_12px_12px_rgba(0,0,0,0.4)]" />
         </motion.div>
 
         {/* Right Content */}

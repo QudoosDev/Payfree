@@ -60,7 +60,7 @@ export default function App() {
       <div id="features"><Features /></div>
       <div id="about"><WhyChooseUs /></div>
       <div id="reporting"><Reporting /></div>
-      <div id="solutions"><Solutions /></div>
+      <div id="solutions"><Solutions onAuth={navigateToAuth} /></div>
       <FinalCTA onAuth={navigateToAuth} />
       <Footer />
       

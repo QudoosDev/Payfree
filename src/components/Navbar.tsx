@@ -20,7 +20,7 @@ export default function Navbar({ onAuth }: NavbarProps) {
         
         {/* Logo */}
         <div className="flex items-center flex-1">
-          <img src="/logo.webp" alt="Payfree" className="h-8 md:h-10 object-contain w-auto md:ml-[-140px]" />
+          <img src="/logo.webp" alt="Payfree" referrerPolicy="no-referrer" className="h-8 md:h-10 object-contain w-auto md:ml-[-140px]" />
         </div>
 
         {/* Center Links (Desktop) */}

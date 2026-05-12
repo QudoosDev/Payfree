@@ -4,6 +4,7 @@ export default function DashboardPreview() {
       <img 
         src="/dashboard.webp" 
         alt="Payfree Dashboard Preview" 
+        referrerPolicy="no-referrer"
         className="w-full h-auto object-contain drop-shadow-[0_12px_12px_rgba(0,0,0,0.4)]"
       />
     </div>

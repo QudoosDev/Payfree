@@ -14,6 +14,7 @@ export default function Hero({ onAuth }: HeroProps) {
         <img 
           src="/hero_section_background_gradient.webp" 
           alt="Background Gradient" 
+          referrerPolicy="no-referrer"
           className="w-full h-[150%] md:h-full object-cover md:object-fill object-top pointer-events-none"
         />
       </div>

@@ -69,6 +69,7 @@ export default function Features() {
           <img 
              src="/smart_feature_section.webp" 
              alt="Smart features dashboard" 
+             referrerPolicy="no-referrer"
              className="w-full max-w-[560px] h-auto object-contain drop-shadow-[0_12px_12px_rgba(0,0,0,0.4)]" 
           />
         </motion.div>

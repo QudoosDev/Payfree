@@ -46,11 +46,10 @@ export default function Auth({ onBack, onSuccess, initialType = 'login' }: AuthP
       <div className="w-full max-w-[480px] relative z-10">
         {/* Logo/Header */}
         <div className="text-center mb-10">
-          <motion.img 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <img 
             src="/logo.webp" 
             alt="Payfree" 
+            referrerPolicy="no-referrer"
             className="h-10 mx-auto mb-6 object-contain" 
           />
           <motion.h1 

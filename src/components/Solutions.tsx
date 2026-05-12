@@ -1,7 +1,11 @@
 import { ArrowUpRight, MoreVertical } from 'lucide-react';
 import { motion } from 'motion/react';
 
-export default function Solutions() {
+interface SolutionsProps {
+  onAuth?: (type: 'login' | 'signup') => void;
+}
+
+export default function Solutions({ onAuth }: SolutionsProps) {
   return (
     <section className="w-full max-w-7xl mx-auto px-4 py-24">
       <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
@@ -14,7 +18,7 @@ export default function Solutions() {
           transition={{ duration: 0.8 }}
           className="flex-1 w-full relative flex justify-center"
         >
-          <img src="/solutions_designed.webp" alt="Solutions Designed for Every Financial Need" className="w-full h-auto max-w-[500px] object-contain drop-shadow-[0_12px_12px_rgba(0,0,0,0.4)]" />
+          <img src="/solutions_designed.webp" alt="Solutions Designed for Every Financial Need" referrerPolicy="no-referrer" className="w-full h-auto max-w-[500px] object-contain drop-shadow-[0_12px_12px_rgba(0,0,0,0.4)]" />
         </motion.div>
 
         {/* Right Content */}
@@ -37,7 +41,10 @@ export default function Solutions() {
             financial journey.
           </p>
 
-          <button className="flex items-center gap-2 btn-custom-gradient text-[#1a1c1b] px-8 py-3.5 rounded-full font-bold shadow-md transition-all active:scale-95 group">
+          <button 
+            onClick={() => onAuth?.('signup')}
+            className="flex items-center gap-2 btn-custom-gradient text-[#1a1c1b] px-8 py-3.5 rounded-full font-bold shadow-md transition-all active:scale-95 group cursor-pointer"
+          >
             Explore Services <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </button>
         </motion.div>

@@ -25,7 +25,7 @@ export default function FinalCTA({ onAuth }: FinalCTAProps) {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="hidden lg:block absolute top-[50%] left-0 -translate-y-1/2 -translate-x-[15%] w-[320px] opacity-100 z-0"
         >
-          <img src="/final_CTA_left.webp" alt="Decoration left" className="w-full h-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.1)]" />
+          <img src="/final_cta_left.webp" alt="Decoration left" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.1)]" />
         </motion.div>
 
         {/* Right Side Cutoff */}
@@ -36,7 +36,7 @@ export default function FinalCTA({ onAuth }: FinalCTAProps) {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="hidden lg:block absolute top-[50%] right-0 -translate-y-1/2 translate-x-[15%] w-[340px] opacity-100 z-0"
         >
-          <img src="/final_CTA_right.webp" alt="Decoration right" className="w-full h-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.1)]" />
+          <img src="/final_cta_right.webp" alt="Decoration right" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.1)]" />
         </motion.div>
 
         {/* Bottom Chart Cutoff - Positioned to be overlapped by button */}
@@ -47,7 +47,7 @@ export default function FinalCTA({ onAuth }: FinalCTAProps) {
           transition={{ duration: 1, delay: 0.1 }}
           className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[35%] w-[350px] md:w-[600px] lg:w-[680px] z-0"
         >
-           <img src="/Last_CTA_center.webp" alt="Decoration center" className="w-full h-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.15)] mt-[45px]" />
+           <img src="/last_cta_center.webp" alt="Decoration center" referrerPolicy="no-referrer" className="w-full h-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.15)] mt-[45px]" />
         </motion.div>
 
 
