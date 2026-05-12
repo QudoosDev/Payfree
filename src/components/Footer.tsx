@@ -1,40 +1,20 @@
-import { useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
-
-gsap.registerPlugin(ScrollTrigger);
+import { motion } from 'motion/react';
 
 export default function Footer() {
-  const containerRef = useRef<HTMLElement>(null);
-
-  useGSAP(() => {
-    gsap.from(containerRef.current, {
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top 95%",
-        toggleActions: "play none none none"
-      },
-      y: 40,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power3.out"
-    });
-  }, { scope: containerRef });
-
   return (
-    <footer ref={containerRef} className="w-full max-w-7xl mx-auto px-4 pt-16 pb-8 border-t border-gray-100">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+    <footer className="w-full max-w-7xl mx-auto px-4 pt-16 pb-8 border-t border-gray-100">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16"
+      >
         
         {/* Brand Column */}
         <div className="lg:col-span-4 pl-2">
           <div className="flex items-center gap-2 mb-6">
-            <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 28C12 28 8 28 8 24C8 20 12 12 20 12C28 12 32 16 32 16" stroke="#11D590" strokeWidth="4" strokeLinecap="round"/>
-              <path d="M16 28C16 28 12 28 12 24C12 20 16 16 20 16C24 16 28 20 28 20" stroke="#11D590" strokeWidth="4" strokeLinecap="round" opacity="0.6"/>
-              <path d="M20 28C20 28 16 28 16 24C16 22 18 20 20 20C22 20 24 22 24 24" stroke="#B3B1F4" strokeWidth="4" strokeLinecap="round"/>
-            </svg>
-            <span className="text-xl font-bold text-[var(--color-text-dark)] tracking-tight">Payfree</span>
+            <img src="/logo.png" alt="Payfree" className="h-8 object-contain" />
           </div>
           <p className="text-gray-500 text-sm max-w-[260px] leading-relaxed mb-8">
             Helping individuals and business simplify money management through
@@ -57,11 +37,11 @@ export default function Footer() {
         <div className="lg:col-span-2">
           <h4 className="font-bold text-[var(--color-text-dark)] mb-6">Links</h4>
           <ul className="space-y-4">
-            <li><a href="#" className="text-gray-500 text-sm hover:text-[var(--color-primary)] transition-colors">Home</a></li>
-            <li><a href="#" className="text-gray-500 text-sm hover:text-[var(--color-primary)] transition-colors">Solutions</a></li>
-            <li><a href="#" className="text-gray-500 text-sm hover:text-[var(--color-primary)] transition-colors">Service</a></li>
-            <li><a href="#" className="text-gray-500 text-sm hover:text-[var(--color-primary)] transition-colors">Resource</a></li>
-            <li><a href="#" className="text-gray-500 text-sm hover:text-[var(--color-primary)] transition-colors">About Us</a></li>
+            <li><a href="#hero" className="text-gray-500 text-sm hover:text-[var(--color-primary)] transition-colors">Home</a></li>
+            <li><a href="#solutions" className="text-gray-500 text-sm hover:text-[var(--color-primary)] transition-colors">Solutions</a></li>
+            <li><a href="#reporting" className="text-gray-500 text-sm hover:text-[var(--color-primary)] transition-colors">Analytics</a></li>
+            <li><a href="#features" className="text-gray-500 text-sm hover:text-[var(--color-primary)] transition-colors">Features</a></li>
+            <li><a href="#about" className="text-gray-500 text-sm hover:text-[var(--color-primary)] transition-colors">About Us</a></li>
           </ul>
         </div>
 
@@ -88,15 +68,15 @@ export default function Footer() {
           </ul>
         </div>
 
-      </div>
+      </motion.div>
 
       <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-xs text-gray-500">
-          © 2025 Payfree Finance
+          © 2026 Payfree Finance. All rights reserved.
         </div>
         <div className="flex gap-8 text-xs text-gray-500">
           <a href="#" className="hover:text-gray-800 transition-colors">Terms & Conditions</a>
-          <a href="#" className="hover:text-gray-800 transition-colors">All rights reserved</a>
+          <a href="#" className="hover:text-gray-800 transition-colors">Privacy Policy</a>
         </div>
       </div>
     </footer>

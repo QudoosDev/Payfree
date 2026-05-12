@@ -19,6 +19,20 @@
   --radius-full: 9999px;
 }
 
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--color-text-dark);
@@ -55,8 +69,8 @@ body {
     box-shadow: 
       inset 0px 2px 0px rgba(255, 255, 255, 0.6),
       inset 0px -2px 0px rgba(0, 0, 0, 0.1),
-      0px 16px 32px -8px rgba(113, 230, 195, 0.7),
-      0px 8px 16px -4px rgba(206, 191, 255, 0.5);
+      0px 10px 18px -4px rgba(0, 0, 0, 0.15),
+      0px 4px 6px -2px rgba(0, 0, 0, 0.08);
     cursor: pointer;
     transition: all 150ms ease;
   }
@@ -64,10 +78,9 @@ body {
     filter: brightness(1.05);
   }
   .btn-custom-gradient:active {
-    transform: translateY(1px);
     box-shadow: 
       inset 0px 2px 4px rgba(0, 0, 0, 0.08),
-      0px 6px 12px -2px rgba(113, 230, 195, 0.4);
+      0px 4px 8px -2px rgba(0, 0, 0, 0.05);
   }
 
   .btn-white-3d {
@@ -75,8 +88,8 @@ body {
     box-shadow: 
       inset 0px 2px 0px #ffffff,
       inset 0px -2px 0px rgba(0, 0, 0, 0.04),
-      0px 14px 28px -6px rgba(0, 0, 0, 0.1),
-      0px 4px 12px -3px rgba(0, 0, 0, 0.06);
+      0px 10px 18px -4px rgba(0, 0, 0, 0.12),
+      0px 4px 6px -2px rgba(0, 0, 0, 0.06);
     cursor: pointer;
     transition: all 150ms ease;
     border: 1px solid #D0D5D3;
@@ -85,7 +98,6 @@ body {
     background: #fafafa;
   }
   .btn-white-3d:active {
-    transform: translateY(1px);
     box-shadow: 
       inset 0px 2px 4px rgba(0, 0, 0, 0.04),
       0px 4px 8px -2px rgba(0, 0, 0, 0.05);
